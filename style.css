@@ -1,0 +1,111 @@
+ /* Start Variables */
+ :root {
+    --main-color :#006061;
+ }
+ /* End Variables */
+ /* Start Globales rules */
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(2,0,36);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,160,221,1) 0%, rgba(0,248,250,1) 0%, rgba(161,218,242,1) 100%, rgba(255,255,255,1) 100%);
+    padding-top: 50px;
+    height: 80%;
+ }
+ /* End Globales rules */
+  /* Start The Container */
+ .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .container >h1 {
+    color: white;
+ }
+ /* Start Selection */
+ .container .Selection {
+    margin-top: 20px;
+    width: 50%;
+
+    
+ }
+ .container .Selection .SersheBar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    height: 40px;
+ } 
+ .container .Selection .SersheBar input  {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+
+ } 
+ .container .Selection .SersheBar span  {
+    font-size: 30px;
+    color: aqua;
+ } 
+ .container .Selection  .FilterButones {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax( 20%, 1fr));
+   gap: 10px;
+   margin-top : 20px;;
+ } 
+ .container .Selection  .FilterButones input {
+   padding: 10px;
+   border-radius: 10px;
+   border: none;
+   background-color: var(--main-color);
+   color: white;
+   font-size: 20px;
+ }
+ .container .Selection  .FilterButones input:hover {
+  background-color: #1ad7d9;
+ }
+ /* End Selection */
+ /* Start Products */
+ .container .Products {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 10px;
+   margin-top : 50px;
+   overflow: scroll;
+   max-height: 500px;
+   width:100%;
+   padding: 30px;
+   box-shadow: gray;
+   background-color: var(--main-color);
+  }
+  .container .Products .Product {
+   background-color: white;
+   height: auto;
+   border-radius: 10px;
+   padding: 5px;
+   
+  }
+  .container .Products .Product  button {
+   width: 100%;
+   padding: 5px;
+   background-color: var(--main-color);
+   color: white;
+   margin-top: 5px;
+   border-radius: 10px;
+  }
+
+.container img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+/* End Products */
