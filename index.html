@@ -88,5 +88,21 @@
         </div>
     </div>
     <!--End Container-->
+        <script>
+        function Filter(){
+         const input = document.getElementById("inputs")
+         
+         const products = [...document.getElementsByClassName("Product")]
+         for (x in products ) {
+           const y= [...products[x].getElementsByTagName("h1")]
+           for (d in y){
+              if (y[d].textContent == input.value) {
+                console.log(y[d].textContent)
+                
+              }
+           }
+         }
+        }
+    </script>
 </body>
 </html>
