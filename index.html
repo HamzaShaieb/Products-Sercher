@@ -91,18 +91,20 @@
         <script>
         function Filter(){
          const input = document.getElementById("inputs")
-         
-         const products = [...document.getElementsByClassName("Product")]
+         const products = [...document.getElementsByClassName("Product")] 
+         const  remov = [...document.getElementsByClassName("dark")]
+         for (t in remov) {
+            remov[t].classList.remove("dark")
+         }                                                                                                                                                                                                                                                                                                                       
          for (x in products ) {
-           const y= [...products[x].getElementsByTagName("h1")]
-           for (d in y){
-              if (y[d].textContent == input.value) {
-                console.log(y[d].textContent)
-                
-              }
-           }
+           const y= products[x].getElementsByTagName("h1")[0]
+           if ( y.textContent != input.value) {
+            products[x].classList.add("dark")
+         } else if (y.textContent == "") {
+            products[x].classList.remove("dark")
          }
-        }
+           
+        }}
     </script>
 </body>
 </html>
